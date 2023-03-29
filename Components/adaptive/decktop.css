@@ -1,0 +1,274 @@
+
+/*ПОДКЛЮЧЕННЫЕ ШРИФТЫ START*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Noto+Serif:wght@700&display=swap');
+/*ПОДКЛЮЧЕННЫЕ ШРИФТЫ END*/
+@media screen and (min-width: 1025px) and (max-width: 2300px) {
+    *{
+        outline: none;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    html,
+    body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100%;
+        background: url("/assets/09ad3d92-57fc-4209-9607-5dade0bd8467.png") 50% no-repeat fixed;
+        background-size: cover;
+        background-clip: border-box;
+        background-color: black;
+    }
+
+    .container {
+        max-width: 100vw;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    /*HEADER*/
+    .header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        max-height: 15vh;
+        background-color: rgba(0, 0, 0, 0.46);
+        border-bottom: .3px solid rgba(255, 255, 255, 0.22);
+
+    }
+
+    .header-image {
+        width: 20vw;
+        height: 15vh;
+        position: relative;
+
+    }
+    .header-image_logo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100px;
+
+    }
+
+    .header_burger-menu {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 50px;
+        right: 115px;
+    }
+
+    .menu ul {
+        display: flex;
+        gap: 2vmin;
+    }
+
+    ul li {
+        display: block;
+        font-weight: 700;
+        font-size: 1.5vmin;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    li a {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    li:hover a {
+        color: white;
+    }
+    /*MAIN START*/
+    .main {
+        margin-top: 200px;
+        width: 100%;
+        height: 80px;
+    }
+
+    .main-title {
+        min-height: 40px;
+        padding: 10px 5px 5px 100px;
+        font-weight: 700;
+        font-size: 7vmin;
+        font-family: 'Noto Serif', sans-serif;
+        margin-bottom: 0;
+        margin-left: -5px;
+        background-image: linear-gradient(40deg, rgba(249,245,245,1) 20%, rgba(255,0,0,20) 50%);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation-name: show-title;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes show-title {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .main-subtitle {
+        font-weight: 900;
+        font-size: 2vmin;
+        margin-top: 0;
+        padding: 5px 5px 5px 100px;
+        font-family: 'Noto Serif', sans-serif;
+        background-image: linear-gradient(10deg, rgba(249,245,245,5) 20%, rgba(255,0,0,20) 40%);
+        background-clip: text;
+        color: white;
+        -webkit-background-clip: text;
+        animation-name: show-subtitle;
+        animation-duration: 1.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+
+    }
+
+    @keyframes show-subtitle {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .main-btn {
+        width: 265px;
+        height: 56px;
+        background-color: transparent;
+        color: white;
+        border: 1px solid skyblue;
+        border-image: linear-gradient(to right top, blue, skyblue, blue);
+        border-image-slice: 1;
+        margin-top: 90px;
+        margin-left: 100px;
+        font-weight: bold;
+        font-size: 1.5vh;
+        padding: 5px 5px 5px 0;
+        font-family: 'Montserrat', sans-serif;
+        outline: none;
+        -webkit-background-clip: text;
+        animation-name: show-btn;
+        animation-duration: 1.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes show-btn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .main-rocket {
+        display: none;
+        max-width: 10vw;
+        max-height: 10vh;
+        position: absolute;
+        right: 400px;
+        transform: rotate(180deg);
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+    }
+
+    .show-animation {
+        display: block;
+        animation-name: rocket-fly;
+    }
+
+    @keyframes rocket-fly {
+        0% {
+            top: -150px;
+            opacity: 1;
+        }
+
+        100% {
+            top: 90%;
+            opacity: 0
+        }
+    }
+
+    .main-info-icons {
+        position: absolute;
+        top: 400px;
+        right: 80px;
+        display: flex;
+        gap: 1vh;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap !important;
+    }
+
+    .main-info-rating,
+    .main-info-guarantee,
+    .main-info-calendar,
+    .main-info-travel{
+        width: 45%;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column nowrap;
+        border-bottom: .5px solid #1e1e1e;
+        border-right: .5px solid #1e1e1e;
+        background-color: rgba(0, 0, 0, 0.14);
+        animation-name: show-icons;
+        animation-duration: 1.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes show-icons {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .main-info-rating_title {
+        font-weight: normal;
+        font-size: 1vmin;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+    }
+
+    .main-info-rating_number {
+        font-weight: bold;
+        font-size: 3vmin;
+        font-family: 'Noto Serif', serif;
+        color: white;
+    }
+
+    .main-info-rating_text {
+        font-weight: normal;
+        font-size: 1vmin;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+    }
+
+}
+
